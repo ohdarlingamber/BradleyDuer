@@ -79,3 +79,15 @@ header nav ul li a:hover {
 .hero .btn:hover {
     background: #e67e22;
 }
+
+/* About section */
+
+.about, .music, .contact {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.about h2, .music h2, .contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
