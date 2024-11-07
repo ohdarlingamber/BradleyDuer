@@ -158,7 +158,16 @@ header nav ul li a:hover {
     font-size: 1.5rem;
 }
 
+/* music.html - playlist */
+.playlist {
+    text-align: center;
+    padding: 30px;
+    background: #f7f7f7;
+}
 
+.playlist iframe {
+    border-radius: 10px;
+}
 
 /* Footer */
 

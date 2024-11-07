@@ -4,8 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+
+
+    <!-- Back to top button -->
+    <button id="backToTop" class="back-to-top">↑</button>
+
+    <!-- Header -->
+    <header>
+
+        <div class="logo">Bradley Duer Music</div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="music.html">Music</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1>Welcome to Bradley Duer Music</h1>
+        <p id="hero-tagline"></p>
+        <a href="#music" class="btn">Listen Now</a>
+       <!--<p id="countdown"></p>-->
+    </section>
+
+    <!-- Spotify -->
+     <section id="playlist" class="playlist">
+        <h2>Check out my playlist</h2>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/2FgwmfybPOF1tFNO8khfWd?utm_source=generator&theme=0" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+        </iframe>
+
+     </section>
     
+
+
+
+    <!-- Music -->
+    <section id="music" class="music">
+        <h2>Check out my music</h2>
+        <ul>
+            <li><a href="https://bradleyduer.bandcamp.com" target="_blank">Band Camp</a></li>
+            <li><a href="https://youtube.com/bradleyduer" target="_blank">Youtube</a></li>
+            <li><a href="https://soundcloud.com/bradleyduer" target="_blank">Sound Cloud</a></li>
+            <li><a href="https://spotify.com/bradleyduer" target="_blank">Spotify</a></li>
+        </ul>
+
+        <div id="music-player">
+            <audio id="audio-player" controls>
+                <source src="Music/Sea of Love cover.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <p id="track-name">Track Name: <span id="current-track-name">Sea of Love (cover)</span></p>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <h2>Contact</h2>
+        <p>Connect with Bradley on social media or send an email!</p>
+        <ul>
+            <li><a href="https://instagram.com/bradleyduer" target="_blank">Instagram</a></li>
+            <li><a href="https://tiktok.com/bradleyduer" target="_blank">TikTok</a></li>
+            <li><a href="mailto:bradleyduermusic@gmail.com">Email</a></li>
+        </ul>
+    </section>
+
+    <!-- Modal for announcements-->
+     <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>New single out now! Check it out on Spotify!</p>
+        </div>
+     </div>
+
+
+
+<!-- Footer -->
+    <footer>
+        <p>&copy; <span id="year"></span> Bradley Duer Music. All rights reserved.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+
 </body>
 </html>
