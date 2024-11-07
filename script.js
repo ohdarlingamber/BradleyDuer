@@ -82,3 +82,19 @@ audioPlayer.addEventListener('pause', () => {
     console.log('Music is paused.');
 });
 
+// Animated typing effects
+const tagline = "Your source for unique and inspiring sounds."; // Edit tagline 
+const heroTagline = document.getElementById('hero-tagline');
+let i = 0;
+
+function typeEffect() {
+    if (i < tagline.length) {
+        heroTagline.textContent += tagline.charAt(i);
+        i++;
+        setTimeout(typeEffect, 100); // Adjust typing speed here
+    }
+}
+
+document.addEventListener('DOMContentLoaded', typeEffect);
+
+
