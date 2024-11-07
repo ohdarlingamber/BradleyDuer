@@ -13,6 +13,26 @@ body {
     color: #333;
 }
 
+/* Fonts */
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+/* Logo */
+.logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+
 /* Header */
 
 header {
@@ -51,7 +71,7 @@ header nav ul li a:hover {
 /* Hero section */
 
 .hero {
-    background: url('Photos/albumcoverhope.jpg') no-repeat center center/cover;
+    background: url('Photos/hope2.jpg') no-repeat center center/cover;
     height: 100vh;
     color: #fff;
     text-align: center;
