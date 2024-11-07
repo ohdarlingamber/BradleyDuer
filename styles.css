@@ -47,3 +47,35 @@ header nav ul li a {
 header nav ul li a:hover {
     color: #f39c12;
 }
+
+/* Hero section */
+
+.hero {
+    background: url('Photos/albumcoverhope.jpg') no-repeat center center/cover;
+    height: 100vh;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #f39c12;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.hero .btn:hover {
+    background: #e67e22;
+}
