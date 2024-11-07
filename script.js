@@ -98,3 +98,21 @@ function typeEffect() {
 document.addEventListener('DOMContentLoaded', typeEffect);
 
 
+// Contact Form with Validation
+const contactForm = document.getElementById('contact-form');
+const formResponse = document.getElementById('form-response');
+
+contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    if (name && email && message) {
+        formResponse.textContent = 'Thank you for your message!';
+        contactForm.reset();
+    } else {
+        formResponse.textContent = 'Please fill out all fields.';
+        formResponse.style.color = 'red';
+    }
+});

@@ -3,9 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+
+
+    <!-- Back to top button -->
+    <button id="backToTop" class="back-to-top">↑</button>
+
+    <!-- Header -->
+    <header>
+
+        <div class="logo">Bradley Duer Music</div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about.html">About</a></li>
+                <li><a href="music.html">Music</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1>Welcome to Bradley Duer Music</h1>
+        <p id="hero-tagline"></p>
+        <a href="#music" class="btn">Listen Now</a>
+    </section>
+
+   <!-- Contact form -->
+    <!-- Need to style form-->
+
+    <section id="contact-form">
+     <h2>Contact Bradley Duer</h2>
+     <form action="contact.php" method="post">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+          <button type="submit" class="btn">Send</button>
+     </form>
+     <div id="form-response"></div>
+
     
+<!-- Footer -->
+    <footer>
+        <p>&copy; <span id="year"></span> Bradley Duer Music. All rights reserved.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+
 </body>
 </html>
