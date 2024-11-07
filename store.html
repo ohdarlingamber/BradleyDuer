@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>Store</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -21,7 +21,7 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#about.html">About</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="music.html">Music</a></li>
                 <li><a href="store.html">Store</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -35,33 +35,39 @@
         <h1>Welcome to Bradley Duer Music</h1>
         <p id="hero-tagline"></p>
         <a href="#music" class="btn">Listen Now</a>
+
+       <!--<p id="countdown"></p>-->
+
     </section>
 
-   <!-- Contact form -->
-    <!-- Need to style form-->
-
-    <section id="contact-form">
-     <h2>Contact Bradley Duer</h2>
-     <form action="contact.php" method="post">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required>
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" required></textarea>
-          <button type="submit" class="btn">Send</button>
-     </form>
-     <div id="form-response"></div>
+    <!-- Store -->
+    <section id="store" class="store">
+        <h2>Merchandise</h2>
+        <div class="merch-item">
+            <img src="shirt.jpg" alt="T-shirt">
+            <h3>Bradley Duer T-Shirt</h3>
+            <p>$25.00</p>
+            <button>Add to Cart</button>
+        </div>
     </section>
     
 
-  <!-- Modal for announcements-->
-  <div id="modal" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <p>New single out now! Check it out on Spotify!</p>
-    </div>
- </div>
+
+    
+
+  
+      
+
+ 
+
+    <!-- Modal for announcements-->
+     <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>New single out now! Check it out on Spotify!</p>
+        </div>
+     </div>
+
 
 
 <!-- Footer -->

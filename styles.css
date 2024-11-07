@@ -169,6 +169,40 @@ header nav ul li a:hover {
     border-radius: 10px;
 }
 
+/* Store.html */
+.store {
+    text-align: center;
+    padding: 30px;
+}
+
+.merch-item {
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+    max-width: 200px;
+}
+
+.merch-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.merch-item button {
+    padding: 10px 15px;
+    background: #f39c12;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.merch-item button:hover {
+    background: #e67e22;
+}
+
+
+
 /* Footer */
 
 footer {
