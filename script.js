@@ -4,7 +4,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         e.preventDefault();
         document.querySelector(this.getAttribute('href')).scrollIntoView({
             behavior: 'smooth'
-
+        });
     });
 });
 
@@ -50,11 +50,41 @@ musicLinks.forEach(link => {
 
 // Dynamic year in footer
 document.addEventListener('DOMContentLoaded', () => {
+    // Dynamic year in footer
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Audio player
+    const audioPlayer = document.getElementById('audio-player');
+    const trackNameElement = document.getElementById('current-track-name');
+    const nextButton = document.getElementById('next-button');
+    const sources = audioPlayer.querySelectorAll('source');
+    let currentTrackIndex = 0;
+
+    // Set initial track name
+    trackNameElement.textContent = sources[currentTrackIndex].getAttribute('data-track-name');
+
+    // Function to update the track
+    function updateTrack(index) {
+        audioPlayer.src = sources[index].src;
+        trackNameElement.textContent = sources[index].getAttribute('data-track-name');
+        audioPlayer.load();
+        audioPlayer.play();
+    }
+
+    // Event listener for the "Next" button
+    nextButton.addEventListener('click', () => {
+        currentTrackIndex = (currentTrackIndex + 1) % sources.length;
+        updateTrack(currentTrackIndex);
+    });
+
+    // Update track name when audio player is loaded
+    audioPlayer.addEventListener('loadedmetadata', () => {
+        trackNameElement.textContent = audioPlayer.src.split('/').pop().replace('.mp3', '');
+    });
 });
 
 
-// Add more tracks to make sure audio player works
+/*// Add more tracks to make sure audio player works
 // Audio player - index.html
 const audioPlayer = document.getElementById('audio-player');
 audioPlayer.addEventListener('play', () => {
@@ -80,7 +110,7 @@ audioPlayer.addEventListener('play', () => {
 });
 audioPlayer.addEventListener('pause', () => {
     console.log('Music is paused.');
-});
+}); */
 
 // Animated typing effects
 const tagline = "Your source for unique and inspiring sounds."; // Edit tagline 

@@ -79,11 +79,17 @@ header nav ul li a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
 .hero h1 {
     font-size: 3rem;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
 }
 
 .hero .btn {
@@ -93,7 +99,7 @@ header nav ul li a:hover {
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .hero .btn:hover {
@@ -108,16 +114,43 @@ header nav ul li a:hover {
 }
 
 .about h2, .music h2, .contact h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 20px;
 }
 
+.about h2 {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Music section */
 .music a, .contact a {
     text-decoration: none;
 }
 
 .music ul, .contact ul {
     list-style: none;
+}
+
+.music h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Instagram feed */
+.social {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.social h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -141,6 +174,20 @@ header nav ul li a:hover {
     background: #e67e22;
 }
 
+/* Contact section - index.html */
+
+.contact h2 {
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.contact {
+    margin-top: 10px;
+}
+
+.contact p {
+    margin-bottom: 20px;
+}
 /* Contact form */
 #form-response {
     margin-top: 10px;
