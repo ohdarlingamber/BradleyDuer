@@ -4,7 +4,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         e.preventDefault();
         document.querySelector(this.getAttribute('href')).scrollIntoView({
             behavior: 'smooth'
-        });
+
     });
 });
 
@@ -116,3 +116,43 @@ contactForm.addEventListener('submit', (e) => {
         formResponse.style.color = 'red';
     }
 });
+
+    /*
+ // Countdown timer
+ const countdownElement = document.getElementById('countdown');
+ const targetDate = new Date('December 31, 2024 23:59:59').getTime();
+
+ function updateCountdown() {
+     const now = new Date().getTime();
+     const distance = targetDate - now;
+
+     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+     const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+     countdownElement.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+     if (distance < 0) {
+         clearInterval(countdownInterval);
+         countdownElement.textContent = 'EXPIRED';
+     }
+ }
+
+ const countdownInterval = setInterval(updateCountdown, 1000);
+ updateCountdown(); // Initial call to display the countdown immediately
+}); */
+
+// Modal for announcements //
+const modal = document.getElementById('modal');
+const closeModal = document.querySelector('.close');
+
+// Show modal after 5 seconds
+setTimeout(() => {
+    modal.style.display = 'flex';
+}, 5000);
+
+// Close modal
+    closeModal.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
