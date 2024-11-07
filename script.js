@@ -54,3 +54,31 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+// Add more tracks to make sure audio player works
+// Audio player - index.html
+const audioPlayer = document.getElementById('audio-player');
+audioPlayer.addEventListener('play', () => {
+    console.log('Music is playing!');
+});
+audioPlayer.addEventListener('pause', () => {
+    console.log('Music is paused.');
+});
+
+const trackNameElement = document.getElementById('current-track-name');
+
+// Set initial track name
+trackNameElement.textContent = 'Sea of Love (cover)';
+
+// Update track name when audio player is loaded
+audioPlayer.addEventListener('loadedmetadata', () => {
+    const trackName = audioPlayer.querySelector('source').src.split('/').pop();
+    trackNameElement.textContent = trackName;
+});
+
+audioPlayer.addEventListener('play', () => {
+    console.log('Music is playing!');
+});
+audioPlayer.addEventListener('pause', () => {
+    console.log('Music is paused.');
+});
+

@@ -120,6 +120,28 @@ header nav ul li a:hover {
     background: #e67e22;
 }
 
+/* Theme toggle button */
+.theme-toggle {
+    background: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+body.dark-mode {
+    background: #222;
+    color: #fff;
+}
+
+body.dark-mode header {
+    background: #333;
+}
+
+body.dark-mode a {
+    color: #f39c12;
+}
+
 /* Footer */
 
 footer {

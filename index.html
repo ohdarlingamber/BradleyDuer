@@ -15,7 +15,9 @@
 
     <!-- Header -->
     <header>
+
         <div class="logo">Bradley Duer Music</div>
+
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -24,6 +26,7 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+
     </header>
 
     <!-- Hero -->
@@ -48,6 +51,14 @@
             <li><a href="https://soundcloud.com/bradleyduer" target="_blank">Sound Cloud</a></li>
             <li><a href="https://spotify.com/bradleyduer" target="_blank">Spotify</a></li>
         </ul>
+
+        <div id="music-player">
+            <audio id="audio-player" controls>
+                <source src="Music/Sea of Love cover.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <p id="track-name">Track Name: <span id="current-track-name">Sea of Love (cover)</span></p>
+        </div>
     </section>
 
     <!-- Contact -->
