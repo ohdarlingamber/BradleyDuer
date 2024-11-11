@@ -60,15 +60,36 @@
             <li><a href="https://spotify.com/bradleyduer" target="_blank">Spotify</a></li>
         </ul>
 
-        <div id="music-player">
-            <audio id="audio-player" controls>
-                <source src="Music/Sea of Love cover.mp3" data-track-name="Sea of Love (cover)" type="audio/mpeg">
-                <source src="Music/Bradley Duer - The Scientist (Coldplay cover).mp3" data-track-name="The Scientist (Coldplay cover)" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
-            <p id="track-name">Track Name: <span id="current-track-name">Sea of Love (cover)</span></p>
-            <button id="next-button">Next</button>
-        </div>
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Music Player</title>
+            <link rel="stylesheet" href="styles.css">
+        </head>
+        <body>
+            <div class="music-player">
+                <div class="track-info">
+                    <h2 id="track-title">Track Title</h2>
+                </div>
+                <audio id="audio"></audio>
+                <div class="controls">
+                    <button id="prev-btn">⏮️</button>
+                    <button id="play-pause-btn">▶️</button>
+                    <button id="next-btn">⏭️</button>
+                </div>
+                <div class="progress-container">
+                    <input type="range" id="progress" min="0" max="100" value="0">
+                </div>
+                <ul id="playlist"></ul>
+            </div>
+            <script src="script.js"></script>
+        </body>
+        </html>
+        
+        
+        
     </section>
 
     <!-- Instagram feed -->

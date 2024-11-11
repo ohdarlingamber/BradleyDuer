@@ -53,64 +53,105 @@ document.addEventListener('DOMContentLoaded', () => {
     // Dynamic year in footer
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Audio player
-    const audioPlayer = document.getElementById('audio-player');
-    const trackNameElement = document.getElementById('current-track-name');
-    const nextButton = document.getElementById('next-button');
-    const sources = audioPlayer.querySelectorAll('source');
-    let currentTrackIndex = 0;
-
-    // Set initial track name
-    trackNameElement.textContent = sources[currentTrackIndex].getAttribute('data-track-name');
-
-    // Function to update the track
-    function updateTrack(index) {
-        audioPlayer.src = sources[index].src;
-        trackNameElement.textContent = sources[index].getAttribute('data-track-name');
-        audioPlayer.load();
-        audioPlayer.play();
-    }
-
-    // Event listener for the "Next" button
-    nextButton.addEventListener('click', () => {
-        currentTrackIndex = (currentTrackIndex + 1) % sources.length;
-        updateTrack(currentTrackIndex);
+    // Music Player
+    document.addEventListener('DOMContentLoaded', () => {
+        const tracks = [
+            { title: "The Scientist (Coldplay cover)", src: "Music/Bradley Duer - The Scientist (Coldplay cover).mp3" },
+            { title: "Sea of Love (cover)", src: "Music/Sea of Love cover.mp3" },
+            { title: "Song 3", src: "Music/song3.mp3" },
+        ];
+    
+        let currentTrackIndex = 0;
+        const audio = document.getElementById("audio");
+        const playPauseBtn = document.getElementById("play-pause-btn");
+        const prevBtn = document.getElementById("prev-btn");
+        const nextBtn = document.getElementById("next-btn");
+        const trackTitle = document.getElementById("track-title");
+        const progress = document.getElementById("progress");
+        const playlist = document.getElementById("playlist");
+    
+        // Load a track
+        function loadTrack(index) {
+            currentTrackIndex = index;
+            audio.src = tracks[index].src;
+            trackTitle.textContent = tracks[index].title;
+            audio.load();
+            highlightCurrentTrack();
+        }
+    
+        // Highlight the current track in the playlist
+        function highlightCurrentTrack() {
+            const allTracks = document.querySelectorAll("#playlist li");
+            allTracks.forEach((track, idx) => {
+                track.classList.toggle("active", idx === currentTrackIndex);
+            });
+        }
+    
+        // Toggle play/pause
+        function togglePlayPause() {
+            if (audio.paused) {
+                audio.play();
+                playPauseBtn.textContent = "⏸️";
+            } else {
+                audio.pause();
+                playPauseBtn.textContent = "▶️";
+            }
+        }
+    
+        // Go to the previous track
+        function prevTrack() {
+            currentTrackIndex = (currentTrackIndex - 1 + tracks.length) % tracks.length;
+            loadTrack(currentTrackIndex);
+            audio.play();
+            playPauseBtn.textContent = "⏸️";
+        }
+    
+        // Go to the next track
+        function nextTrack() {
+            currentTrackIndex = (currentTrackIndex + 1) % tracks.length;
+            loadTrack(currentTrackIndex);
+            audio.play();
+            playPauseBtn.textContent = "⏸️";
+        }
+    
+        // Populate playlist dynamically
+        function populatePlaylist() {
+            tracks.forEach((track, index) => {
+                const li = document.createElement("li");
+                li.textContent = track.title;
+                li.dataset.index = index;
+                li.addEventListener("click", () => {
+                    loadTrack(index);
+                    audio.play();
+                    playPauseBtn.textContent = "⏸️";
+                });
+                playlist.appendChild(li);
+            });
+        }
+    
+        // Update progress bar
+        audio.addEventListener("timeupdate", () => {
+            const progressPercent = (audio.currentTime / audio.duration) * 100;
+            progress.value = progressPercent || 0;
+        });
+    
+        // Seek audio position
+        progress.addEventListener("input", () => {
+            audio.currentTime = (progress.value / 100) * audio.duration;
+        });
+    
+        // Event listeners
+        playPauseBtn.addEventListener("click", togglePlayPause);
+        prevBtn.addEventListener("click", prevTrack);
+        nextBtn.addEventListener("click", nextTrack);
+    
+        // Initialize player
+        populatePlaylist();
+        loadTrack(currentTrackIndex);
     });
-
-    // Update track name when audio player is loaded
-    audioPlayer.addEventListener('loadedmetadata', () => {
-        trackNameElement.textContent = audioPlayer.src.split('/').pop().replace('.mp3', '');
-    });
-});
+    
 
 
-/*// Add more tracks to make sure audio player works
-// Audio player - index.html
-const audioPlayer = document.getElementById('audio-player');
-audioPlayer.addEventListener('play', () => {
-    console.log('Music is playing!');
-});
-audioPlayer.addEventListener('pause', () => {
-    console.log('Music is paused.');
-});
-
-const trackNameElement = document.getElementById('current-track-name');
-
-// Set initial track name
-trackNameElement.textContent = 'Sea of Love (cover)';
-
-// Update track name when audio player is loaded
-audioPlayer.addEventListener('loadedmetadata', () => {
-    const trackName = audioPlayer.querySelector('source').src.split('/').pop();
-    trackNameElement.textContent = trackName;
-});
-
-audioPlayer.addEventListener('play', () => {
-    console.log('Music is playing!');
-});
-audioPlayer.addEventListener('pause', () => {
-    console.log('Music is paused.');
-}); */
 
 // Animated typing effects
 const tagline = "Your source for unique and inspiring sounds."; // Edit tagline 
