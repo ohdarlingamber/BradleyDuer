@@ -59,38 +59,26 @@
             <li><a href="https://soundcloud.com/bradleyduer" target="_blank">Sound Cloud</a></li>
             <li><a href="https://spotify.com/bradleyduer" target="_blank">Spotify</a></li>
         </ul>
-
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Music Player</title>
-            <link rel="stylesheet" href="styles.css">
-        </head>
-        <body>
-            <div class="music-player">
-                <div class="track-info">
-                    <h2 id="track-title">Track Title</h2>
-                </div>
-                <audio id="audio"></audio>
-                <div class="controls">
-                    <button id="prev-btn">⏮️</button>
-                    <button id="play-pause-btn">▶️</button>
-                    <button id="next-btn">⏭️</button>
-                </div>
-                <div class="progress-container">
-                    <input type="range" id="progress" min="0" max="100" value="0">
-                </div>
-                <ul id="playlist"></ul>
-            </div>
-            <script src="script.js"></script>
-        </body>
-        </html>
-        
-        
-        
     </section>
+
+    <!-- Music player-->
+        <div class="music-player">
+            <div class="track-info">
+                <h2 id="track-title">Track Title</h2>
+            </div>
+            <audio id="audio"></audio>
+            <div class="controls">
+                <button id="prev-btn">⏮️</button>
+                <button id="play-pause-btn">▶️</button>
+                <button id="next-btn">⏭️</button>
+            </div>
+            <div class="progress-container">
+                <input type="range" id="progress" min="0" max="100" value="0">
+            </div>
+            <ul id="playlist"></ul>
+        </div>
+    </section>
+    
 
     <!-- Instagram feed -->
     <section id="social" class="social">
@@ -126,7 +114,7 @@
         <p>&copy; <span id="year"></span> Bradley Duer Music. All rights reserved.</p>
     </footer>
     
-    <script src="script.js"></script>
 
 </body>
+<script src="script.js"></script>
 </html>
