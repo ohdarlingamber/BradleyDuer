@@ -62,24 +62,49 @@
     </section>
 
     <!-- Music player-->
-        <div class="music-player">
-            <div class="track-info">
-                <h2 id="track-title">Track Title</h2>
-            </div>
-            <audio id="audio"></audio>
-            <div class="controls">
-                <button id="prev-btn">⏮️</button>
-                <button id="play-pause-btn">▶️</button>
-                <button id="next-btn">⏭️</button>
-            </div>
-            <div class="progress-container">
-                <input type="range" id="progress" min="0" max="100" value="0">
-            </div>
-            <ul id="playlist"></ul>
+     <div class="parent-container">
+    <div class="music-player">
+        
+        <!-- Track Info -->
+        <div class="track-info">
+          <h2 id="track-title">Track Title</h2>
+          <p id="track-artist">Artist Name</p>
         </div>
-    </section>
-    
+      
+        <!-- Top Controls (Autoplay and Shuffle) -->
+        <div class="top-controls">
+          <div class="autoplay-toggle">Autoplay</div>
+          <div class="shuffle-toggle">Shuffle</div>
+        </div>
+      
+        <!-- Main Controls (Play, Pause, Previous, Next) -->
+        <div class="controls">
+          <button id="prev-btn">⏮️</button>
+          <button id="play-pause-btn">▶️</button>
+          <button id="next-btn">⏭️</button>
+        </div>
+      
+        <!-- Progress Bar -->
+        <div class="progress-container">
+          <div id="progress" class="progress-bar"></div>
+        </div>
+      
+        <!-- Playlist -->
+        <ul id="playlist" class="playlist">
+          <li class="active">Sea of Love (cover)</li>
+          <li>The Scientist (Coldplay cover)</li>
+        </ul>
+      </div>
+      </div>
+      
 
+
+
+
+
+
+
+    
     <!-- Instagram feed -->
     <section id="social" class="social">
         <h2>Follow Me on Instagram</h2>
