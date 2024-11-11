@@ -158,7 +158,10 @@ header nav ul li a.active {
 }
 
 /* Music section */
-
+.music {
+    padding: 50px 20px;
+    text-align: center;
+}
 .music a, .contact a {
     text-decoration: none;
 }
@@ -173,13 +176,20 @@ header nav ul li a.active {
     margin-bottom: 20px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
+
+a:hover, a:active {
+    color: #f39c12;
+}
+
+a {
+    color: blue;
+}
   
 /* Parent container for music player */
 .parent-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
   /* Music Player Container */
   .music-player {
@@ -192,6 +202,8 @@ header nav ul li a.active {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
+    margin-bottom: 50px;
+    margin-top: 50px;
     
   }
   
